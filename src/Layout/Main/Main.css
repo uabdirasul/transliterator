@@ -1,0 +1,24 @@
+.transliterator {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.transliterator__text__lang,
+.transliterator__result__lang {
+  margin-bottom: 1rem;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.textarea {
+  width: 100%;
+  height: 20rem;
+  resize: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
