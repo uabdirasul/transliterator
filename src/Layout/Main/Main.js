@@ -7,6 +7,7 @@ class Main extends Component {
     this.state = {
       transliterator__text__lang: "uz_latin",
       transliterator__result__lang: "uz_cyrillic",
+      transliterated__text: "",
     };
     this.transliterateRef = createRef();
   }
@@ -35,7 +36,10 @@ class Main extends Component {
         }
       );
       const result = await response.json();
-      console.log(result, this);
+      this.setState({
+        transliterated__text: result.result,
+      });
+      console.log(result);
     } catch (error) {
       console.log("Error: ", error);
     }
@@ -83,7 +87,12 @@ class Main extends Component {
                   Latin
                 </option>
               </select>
-              <textarea className="textarea" cols="30" rows="10"></textarea>
+              <textarea
+                className="textarea"
+                cols="30"
+                rows="10"
+                value={this.state.transliterated__text}
+              ></textarea>
             </div>
           </div>
         </div>
