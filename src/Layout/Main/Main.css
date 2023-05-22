@@ -19,6 +19,22 @@
   outline: none;
   border-radius: 5px;
   padding: 1rem;
-  margin-bottom: 1rem;
   font-size: 1rem;
+}
+
+.btn {
+  color: #000;
+  background-color: inherit;
+  outline: 1px solid #b2b2b2;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.btn svg {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
