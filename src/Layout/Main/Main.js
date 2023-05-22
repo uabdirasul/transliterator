@@ -101,7 +101,7 @@ class Main extends Component {
                 className="textarea"
                 cols="30"
                 rows="10"
-                value={this.state.transliterated__text}
+                defaultValue={this.state.transliterated__text}
               ></textarea>
               <button className="btn copy__button">
                 <svg
