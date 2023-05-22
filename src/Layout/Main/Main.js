@@ -39,7 +39,6 @@ class Main extends Component {
       this.setState({
         transliterated__text: result.result,
       });
-      console.log(result);
     } catch (error) {
       console.log("Error: ", error);
     }
