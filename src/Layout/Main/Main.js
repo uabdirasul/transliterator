@@ -44,6 +44,20 @@ class Main extends Component {
     }
   };
 
+  resetData = () => {
+    this.transliterateRef.current.value = "";
+    this.setState({
+      transliterated__text: "",
+    });
+  };
+
+  copyData = () => {
+    const { transliterated__text } = this.state;
+    if (transliterated__text) {
+      navigator.clipboard.writeText(transliterated__text);
+    }
+  };
+
   render() {
     return (
       <main>
@@ -71,7 +85,7 @@ class Main extends Component {
                 ref={this.transliterateRef}
                 onChange={this.fetchData}
               ></textarea>
-              <button className="btn reset__button">
+              <button className="btn reset__button" onClick={this.resetData}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 384 512"
@@ -103,7 +117,7 @@ class Main extends Component {
                 rows="10"
                 defaultValue={this.state.transliterated__text}
               ></textarea>
-              <button className="btn copy__button">
+              <button className="btn copy__button" onClick={this.copyData}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 384 512"
