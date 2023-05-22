@@ -5,8 +5,8 @@ class Main extends Component {
   constructor(props) {
     super();
     this.state = {
-      transliterator__text__lang: "uz_latin",
-      transliterator__result__lang: "uz_cyrillic",
+      transliterator__text__lang: "kaa_latin",
+      transliterator__result__lang: "kaa_cyrillic",
       transliterated__text: "",
     };
     this.transliterateRef = createRef();
@@ -57,10 +57,10 @@ class Main extends Component {
                 onChange={this.handleSelect}
                 value={this.state.transliterator__text__lang}
               >
-                <option value="uz_latin" key="uz_latin">
+                <option value="kaa_latin" key="kaa_latin">
                   Latin
                 </option>
-                <option value="uz_cyrillic" key="uz_cyrillic">
+                <option value="kaa_cyrillic" key="kaa_cyrillic">
                   Kirill
                 </option>
               </select>
@@ -80,10 +80,10 @@ class Main extends Component {
                 onChange={this.handleSelect}
                 value={this.state.transliterator__result__lang}
               >
-                <option value="uz_cyrillic" key="uz_cyrillic">
+                <option value="kaa_cyrillic" key="kaa_cyrillic">
                   Kirill
                 </option>
-                <option value="uz_latin" key="uz_latin">
+                <option value="kaa_latin" key="kaa_latin">
                   Latin
                 </option>
               </select>
