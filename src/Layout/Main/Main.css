@@ -44,8 +44,7 @@
 
 .alert {
   position: absolute;
-  font-family: "Oswald", sans-serif;
-  background-color: #e2e2e2;
+  background-color: inherit;
   top: 5.7%;
   right: 1%;
   border-radius: 0.5rem;
@@ -54,6 +53,7 @@
   align-items: center;
   padding: 0.2rem;
   transition: all;
+  border: 1px solid #b2b2b2;
 }
 
 .alert--success {
