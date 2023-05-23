@@ -73,6 +73,11 @@ class Main extends Component {
     }
   };
 
+  hideAlert = () => {
+    this.alertFailRef.current.style.display = "none";
+    this.alertSuccessRef.current.style.display = "none";
+  };
+
   render() {
     return (
       <main>
