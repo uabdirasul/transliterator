@@ -14,6 +14,10 @@ class Main extends Component {
     this.alertFailRef = createRef();
   }
 
+  componentDidMount() {
+    this.transliterateRef.current.focus();
+  }
+
   handleSelect = (e) => {
     const { name, value } = e.target;
     this.setState({
