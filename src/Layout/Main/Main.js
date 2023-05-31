@@ -82,6 +82,12 @@ class Main extends Component {
     this.alertSuccessRef.current.style.display = "none";
   };
 
+  copyOnEnter = (e) => {
+    if (e.ctrlKey && e.key === "Enter") {
+      this.copyData();
+    }
+  };
+
   render() {
     return (
       <main>
@@ -154,6 +160,7 @@ class Main extends Component {
                 placeholder="Jazıń..."
                 ref={this.transliterateRef}
                 onChange={this.fetchData}
+                onKeyDown={this.copyOnEnter}
               ></textarea>
               <button className="btn reset__button" onClick={this.resetData}>
                 <svg
