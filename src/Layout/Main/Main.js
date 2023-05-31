@@ -82,6 +82,10 @@ class Main extends Component {
     this.alertSuccessRef.current.style.display = "none";
   };
 
+  /**
+   * Copies the content of an element when the user presses the "Enter" key while holding down the "Ctrl" key.
+   * @param {Event} e - The event object.
+   */
   copyOnEnter = (e) => {
     if (e.ctrlKey && e.key === "Enter") {
       this.copyData();
